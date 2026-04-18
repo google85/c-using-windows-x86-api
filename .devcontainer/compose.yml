@@ -1,0 +1,17 @@
+name: x86-c-devcontainer
+
+services:
+  devcontainer:
+    image: x86-c-dev:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: devcontainer
+    working_dir: /usr/src/app
+    environment:
+      - TZ=Europe/Bucharest
+    volumes:
+      - ..:/usr/src/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    tty: true
