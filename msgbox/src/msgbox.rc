@@ -5,8 +5,8 @@
 
 // Version info - populates right-click > Properties > Details
 1 VERSIONINFO
-FILEVERSION     1,0,0,0
-PRODUCTVERSION  1,0,0,0
+FILEVERSION     1,0,0,5
+PRODUCTVERSION  1,0,0,5
 FILEFLAGSMASK   0x3fL
 FILEFLAGS       0x0L
 FILEOS          VOS__WINDOWS32
@@ -19,12 +19,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName",      "DjBpF Company"
             VALUE "FileDescription",  "MessageBox Demo"
-            VALUE "FileVersion",      "1.0.0.1"
+            VALUE "FileVersion",      "1.0.0.5"
             VALUE "InternalName",     "msgbox"
             VALUE "LegalCopyright",   "Copyright 2026 by .:DjBpF:."
             VALUE "OriginalFilename", "msgbox.exe"
             VALUE "ProductName",      "Docker Win32 Demo"
-            VALUE "ProductVersion",   "1.0.0.1"
+            VALUE "ProductVersion",   "1.0.0.5"
         END
     END
     BLOCK "VarFileInfo"
