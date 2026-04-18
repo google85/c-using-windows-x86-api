@@ -1,0 +1,34 @@
+#include <windows.h>
+
+// Manifest - enables Common Controls v6 (XP visual style)
+1 RT_MANIFEST "msgbox.manifest"
+
+// Version info - populates right-click > Properties > Details
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   0x3fL
+FILEFLAGS       0x0L
+FILEOS          VOS__WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"   // language: English US, unicode
+        BEGIN
+            VALUE "CompanyName",      "DjBpF Company"
+            VALUE "FileDescription",  "MessageBox Demo"
+            VALUE "FileVersion",      "1.0.0.1"
+            VALUE "InternalName",     "msgbox"
+            VALUE "LegalCopyright",   "Copyright 2026 by .:DjBpF:."
+            VALUE "OriginalFilename", "msgbox.exe"
+            VALUE "ProductName",      "Docker Win32 Demo"
+            VALUE "ProductVersion",   "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

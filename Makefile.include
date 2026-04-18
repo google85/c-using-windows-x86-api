@@ -1,0 +1,30 @@
+.SILENT:
+
+SRC_DIR = ./src
+BUILD_DIR = ./build
+SRC_IN = ${SRC_DIR}/${SRC_FILE}.c
+BIN_OUT = ${BUILD_DIR}/${SRC_FILE}
+BUILD_CC = i686-w64-mingw32-gcc
+
+.PHONY: help
+help:
+	echo "Usage:"
+	sed -n 's/^##//p' ${MAKEFILE_LIST} | sed -e 's/^/ /'
+
+## build: Build the application
+.PHONY: build
+build:
+	mkdir -p ${BUILD_DIR} && chown 1000:1000 ${BUILD_DIR}
+	i686-w64-mingw32-gcc \
+		-O2 -masm=intel \
+		-fno-asynchronous-unwind-tables \
+		-fno-ident \
+		${SRC_DIR}/${SRC_FILE}.c \
+		-o ${BIN_OUT}.exe \
+	-lkernel32 -luser32 -mwindows
+
+## clean: Clean-up the build binaries
+.PHONY: clean
+clean:
+	echo "Cleaning up..."
+	rm -rf ${BUILD_DIR}
