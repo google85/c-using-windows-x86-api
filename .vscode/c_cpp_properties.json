@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux (devcontainer)",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/x86_64-w64-mingw32/include",
+                "/usr/i686-w64-mingw32/include"
+            ],
+            "defines": [
+                "_WIN32",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "/usr/bin/x86_64-w64-mingw32-gcc",
+            "cStandard": "c17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
